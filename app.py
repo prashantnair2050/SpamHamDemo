@@ -1,4 +1,5 @@
-#import textPreprocessor
+import textPreprocessor
+from textPreprocessor import textPreprocessor
 import numpy as np
 import pandas as pd
 import nltk
