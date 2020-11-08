@@ -1,3 +1,4 @@
+#import textPreprocessor
 import numpy as np
 import pandas as pd
 import nltk
@@ -12,7 +13,7 @@ import pickle
 
 app = Flask(__name__)
 
-def textPreprocessor1(featureRecord):
+def textPreprocessor(featureRecord):
     #a.Remove Punctuation
     removePunctuation = [char for char in featureRecord if char not in string.punctuation]
     sentences = ''.join(removePunctuation)
@@ -47,7 +48,7 @@ def predict():
     
     #1. Preprocess
 
-    preProcessedFeatures = textPreprocessor1(SMSInput)
+    preProcessedFeatures = textPreprocessor(SMSInput)
 
     #2. BOW transformation
     bowFeature = finalWordVocab.transform(preProcessedFeatures)
