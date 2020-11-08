@@ -28,7 +28,6 @@ def textPreprocessor1(featureRecord):
     
     return finalWords
 
-textPreprocessor = pickle.load(open('textPreprocessor.pkl', 'rb'))
 model = pickle.load(open('SMS_spamham.pkl', 'rb'))
 tfIdfObject = pickle.load(open('tfIdfObject.pkl','rb'))
 finalWordVocab= pickle.load(open('word_vocab.pkl','rb'))
